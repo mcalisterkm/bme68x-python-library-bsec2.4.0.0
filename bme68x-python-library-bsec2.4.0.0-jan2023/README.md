@@ -40,7 +40,7 @@ bme68x.set_heatr_conf(1, 320, 100, 1)
 data = bme68x.get_data()
 ```
 
-The data collection collection tool bmerawdata.py builds a large data structure and can run out of heap memory during long recording causing SIGSEGV failures.  The Raspbian OS command `ulimit -a` will show the current settings, which typically disable core files (size 0) and limit heap to 8MB.  
+The data collection collection tool bmerawdata.py has multiple issues: segment violations, data output format is no longer compliant to the BOSCH specification, and the file naming is incorrect (model generation fails).   Data collection from a single sensor is limited, however the abiltiy to run AI models is working - See my (mcalisterkm) repository "teach-your-pi-to-sniff-with-bme688: for a tutorial and all the data needed to try this out.  
 
 #### For documentation and examples please refer to our [GitHub](https://github.com/pi3g/bme68x-python-library)<br>
 #### For feedback, bug reports or functionality requests send an E-mail to nathan@pi3g.com<br>
