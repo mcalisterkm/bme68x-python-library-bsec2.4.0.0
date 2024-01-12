@@ -6,14 +6,14 @@ Update of the PI3G python wrapper for the Bosch Sensortec BME688 and BSEC 2.4.0.
 __Update 11/01/2024.__
 
 Be aware that raspbian __bookworm__ (aka Debian 12) has made changes to how it expects Python to be used, that impact the bme68x package.
-There are over 800 debian python-* packages that are managed using apt/dpkg and considered to be site-wide/core packages.
+There are over 800 debian python-* packages that are managed using apt/dpkg and these are considered to be site-wide/core packages.
 Python packages managed by pip working with Python Index (PYPI) are to be installed in a virtual environment (i.e. pip for local packages and apt for site-wide/core packages), as described here: 
 [https://www.raspberrypi.com/documentation/computers/os.html#python-on-raspberry-pi](https://www.raspberrypi.com/documentation/computers/os.html#python-on-raspberry-pi)
 ```
-To create a venv with the built in env package, with access to system-wide packages (change /path/to/env to your desired location)
+To create a virtual environment with the venv package, with access to system-wide python packages (change /path/to/env to your desired location)
 $ python -m venv --system-site-packages /path/to/env
 
-To activate an environment:
+Next activate the environment:
 $ source /path/to/env/bin/activate
 (env) $
 
