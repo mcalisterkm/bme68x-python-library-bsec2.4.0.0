@@ -25,5 +25,10 @@ $
 All python/pip commands run in an virtual environment (venv) will act locally, avoiding any impact on the site-wide/core packages.
 
 This will impact on any shell scripts, and the venv documentation [https://docs.python.org/3/library/venv.html](https://docs.python.org/3/library/venv.html) offers the the following advice:
-
-***You don’t specifically need to activate a virtual environment, as you can just specify the full path to that environment’s Python interpreter when invoking Python. Furthermore, all scripts installed in the environment should be runnable without activating it. In order to achieve this, scripts installed into virtual environments have a “shebang” line which points to the environment’s Python interpreter, i.e. #!/<path-to-venv>/bin/python.***
+```
+In a shell script you don’t specifically need to activate a virtual environment.
+You can just specify the full path to that environment’s Python interpreter when invoking Python.
+Furthermore, all scripts installed in the environment should be runnable without activating it.
+In order to achieve this, a python script installed into virtual environments has a “shebang” line which points to the environment’s Python interpreter, i.e. #!/<path-to-venv>/bin/python.
+A shell script just needs to run python with the full environment path: <path-to-venv>/bin/python <commad.py>
+```
